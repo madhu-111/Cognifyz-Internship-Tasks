@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Component-Based Styling</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .hero {
+      background-color: #b2dfdb;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .btn-custom {
+      background-color: #00796b;
+      color: white;
+    }
+
+    .btn-custom:hover {
+      background-color: #004d40;
+    }
+
+    .custom-card {
+      border: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .custom-card:hover {
+      transform: scale(1.03);
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Component-Based Styling</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4">Component-Based Styling</h1>
+      <p class="lead">Use Bootstrap to streamline your web development process with modular design.</p>
+      <a href="#features" class="btn btn-custom btn-lg mt-3">Explore Features</a>
+    </div>
+  </section>
+
+  <section id="features" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Features</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card custom-card">
+            <div class="card-body">
+              <h5 class="card-title">Responsive Grid</h5>
+              <p class="card-text">Bootstrap’s grid adapts to all screen sizes with ease.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card custom-card">
+            <div class="card-body">
+              <h5 class="card-title">Reusable Components</h5>
+              <p class="card-text">Use cards, navbars, modals and more out of the box.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card custom-card">
+            <div class="card-body">
+              <h5 class="card-title">Easy Theming</h5>
+              <p class="card-text">Customize colors and layouts with just a few lines of CSS.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Pricing</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card text-center custom-card">
+            <div class="card-body">
+              <h5 class="card-title">Basic</h5>
+              <p class="card-text">Free forever</p>
+              <ul class="list-unstyled">
+                <li>✔ Basic Features</li>
+                <li>✔ Responsive Layout</li>
+                <li>✖ Premium Support</li>
+              </ul>
+              <button class="btn btn-outline-primary mt-2">Get Started</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card text-center custom-card">
+            <div class="card-body">
+              <h5 class="card-title">Pro</h5>
+              <p class="card-text">₹1999/month</p>
+              <ul class="list-unstyled">
+                <li>✔ All Basic Features</li>
+                <li>✔ Priority Support</li>
+                <li>✔ Component Library</li>
+              </ul>
+              <button class="btn btn-primary mt-2">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card text-center custom-card">
+            <div class="card-body">
+              <h5 class="card-title">Enterprise</h5>
+              <p class="card-text">Custom Pricing</p>
+              <ul class="list-unstyled">
+                <li>✔ Everything in Pro</li>
+                <li>✔ Dedicated Support</li>
+                <li>✔ Custom Solutions</li>
+              </ul>
+              <button class="btn btn-outline-dark mt-2">Contact Us</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <form class="row g-3">
+        <div class="col-md-6">
+          <label for="name" class="form-label">Your Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="email" placeholder="name@example.com">
+        </div>
+        <div class="col-12">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" rows="4" placeholder="Type your message here"></textarea>
+        </div>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-custom">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="text-center py-3">
+    <p class="mb-0">© 2025 Cognifyz Technologies. Built with Bootstrap.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+// Variables
+$primary-color: #007BFF;
+$secondary-color: #6c757d;
+$font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$border-radius: 8px;
+
+// Mixin for button styling
+@mixin btn-style {
+  padding: 10px 20px;
+  border-radius: $border-radius;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+// Base Styles
+body {
+  font-family: $font-stack;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 20px;
+}
+
+// Header
+header {
+  background-color: $primary-color;
+  color: white;
+  padding: 20px;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+// Button Styles
+.button-primary {
+  @include btn-style;
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
